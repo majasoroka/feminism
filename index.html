@@ -8,11 +8,13 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <header>
-    <nav>
-      <div class="logo">Feminist Archive</div>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#about">Feminist Archive</a>
+      </div>
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#timeline">Timeline</a></li>
         <li><a href="#reading-list">Reading List</a></li>
@@ -26,39 +28,84 @@
   <main>
     <!-- Hero / About Section -->
     <section id="about" class="hero">
-      <h1>Radical Feminist & Women's Rights Archive</h1>
-      <p>Exploring theory, history, and resource archives dedicated to liberation and structural change.</p>
+      <div class="hero-content">
+        <h1>Radical Feminist & Women's Rights Archive</h1>
+        <p>A curated digital archive documenting history, foundational theory, and resources dedicated to women's rights and liberation.</p>
+      </div>
     </section>
 
-    <!-- Timeline Section -->
-    <section id="timeline">
+    <!-- History Timeline Section -->
+    <section id="timeline" class="content-section">
       <h2>History Timeline</h2>
       <div class="timeline-container">
-        <!-- Add your timeline entries here -->
+        
         <article class="timeline-item">
-          <h3>Key Milestone</h3>
-          <p>Details about historic events and milestone movements.</p>
+          <span class="timeline-date">First Wave</span>
+          <h3>Women's Suffrage Movement</h3>
+          <p>Organizing for legal rights, political representation, and the right to vote.</p>
         </article>
+
+        <article class="timeline-item">
+          <span class="timeline-date">Second Wave</span>
+          <h3>Women's Liberation Movement</h3>
+          <p>Focusing on structural equality, reproductive rights, workplace discrimination, and critique of patriarchal structures.</p>
+        </article>
+
+        <article class="timeline-item">
+          <span class="timeline-date">Third & Fourth Waves</span>
+          <h3>Digital Activism & Global Organizing</h3>
+          <p>Utilizing digital archives, media, and intersectional analysis to organize around rights globally.</p>
+        </article>
+
       </div>
     </section>
 
     <!-- Reading List Section -->
-    <section id="reading-list">
-      <h2>Recommended Reading</h2>
-      <ul>
-        <li>Essential texts and foundational literature.</li>
-      </ul>
+    <section id="reading-list" class="content-section">
+      <h2>Recommended Reading List</h2>
+      <div class="card-grid">
+        
+        <div class="card">
+          <h3>Foundational Theory</h3>
+          <p>Key essays and books analyzing social hierarchy, sex-class theory, and patriarchy.</p>
+        </div>
+
+        <div class="card">
+          <h3>Ecofeminism & History</h3>
+          <p>Texts exploring the intersections of environmentalism, resource politics, and women's rights.</p>
+        </div>
+
+        <div class="card">
+          <h3>Legal & Human Rights Archives</h3>
+          <p>Documentation on legal protections, international conventions, and civil rights history.</p>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Podcasts Section -->
-    <section id="podcasts">
+    <!-- Podcast Directory Section -->
+    <section id="podcasts" class="content-section">
       <h2>Podcast Directory</h2>
-      <p>Recommended audio resources and discussions.</p>
+      <div class="card-grid">
+        
+        <div class="card">
+          <h3>Feminist History & Theory</h3>
+          <p>Audio discussions covering the development of radical feminist theory and historical movements.</p>
+        </div>
+
+        <div class="card">
+          <h3>Global Rights & Activism</h3>
+          <p>Interviews with organizers, writers, and advocates working on women's rights globally.</p>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact">
-      <h2>Get in Touch</h2>
+    <!-- Working Formspree Contact Form Section -->
+    <section id="contact" class="content-section">
+      <h2>Contact & Submissions</h2>
+      <p>Have an archival text or resource to suggest? Send a message below.</p>
+
       <form action="https://formspree.io/f/xgoglkqk" method="POST" class="contact-form">
         <div class="form-group">
           <label for="name">Name</label>
@@ -72,7 +119,7 @@
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+          <textarea id="message" name="message" rows="5" required placeholder="Your message or resource submission..."></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Send Message</button>
