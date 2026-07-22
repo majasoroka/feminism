@@ -5,11 +5,9 @@ backend:
   base_url: https://feminism-175.pages.dev
   auth_endpoint: /api/auth
 
-# Where uploaded images/files will be saved
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
-# Define the content collections you want to edit
 collections:
   - name: "pages"
     label: "Pages"
