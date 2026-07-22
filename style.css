@@ -150,7 +150,215 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
-   5. FOOTER
+   5. TIMELINE SECTION STYLES
+   ========================================== */
+.timeline {
+  position: relative;
+  padding: 1rem 0;
+}
+
+/* Vertical line connecting timeline cards */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 120px;
+  width: 3px;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.timeline-date {
+  width: 100px;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent-burgundy);
+  text-align: right;
+  padding-right: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.timeline-body {
+  position: relative;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin-left: 2rem;
+  flex-grow: 1;
+}
+
+/* Circle marker on line */
+.timeline-body::before {
+  content: '';
+  position: absolute;
+  left: -2.35rem;
+  top: 1.2rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--accent-terracotta);
+  border: 3px solid var(--card-bg);
+}
+
+.timeline-body h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-main);
+}
+
+.timeline-body p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.timeline-tag {
+  display: inline-block;
+  background-color: rgba(107, 29, 47, 0.08);
+  color: var(--accent-burgundy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   6. CARDS GRID (READING LIST & PODCASTS)
+   ========================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card-category {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-terracotta);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.resource-card h3 {
+  font-size: 1.15rem;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.resource-card .author {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.resource-card .card-text {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  color: var(--accent-burgundy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   7. CONTACT FORM STYLES
+   ========================================== */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-burgundy);
+  box-shadow: 0 0 0 2px rgba(107, 29, 47, 0.15);
+}
+
+.submit-btn {
+  background-color: var(--accent-burgundy);
+  color: #ffffff;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-terracotta);
+}
+
+/* ==========================================
+   8. FOOTER
    ========================================== */
 .footer {
   text-align: center;
@@ -162,9 +370,9 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================
-   6. RESPONSIVE DESIGN (MOBILE)
+   9. RESPONSIVE DESIGN (MOBILE)
    ========================================== */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .nav-container {
     flex-direction: column;
     gap: 1rem;
@@ -180,5 +388,29 @@ h1, h2, h3, h4 {
 
   .archive-section {
     padding: 1.25rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-date {
+    width: auto;
+    text-align: left;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-body {
+    margin-left: 2rem;
+  }
+
+  .timeline-body::before {
+    left: -2.35rem;
+    top: -1.75rem;
   }
 }
